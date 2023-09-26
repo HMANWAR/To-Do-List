@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    background: linear-gradient(135deg,#153677,#4e085f);
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+
+}
+.todo-app{
+    width: 50%;
+    min-height: 20px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color: #002785;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.row:hover{
+    box-shadow: 0 0 2px 2px;
+    color: lightgreen;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+     font-size: 20px;
+     padding: 12px 8px 12px 50px;
+     user-select: none;
+     cursor: pointer;
+     position: relative;
+}
+ul li:hover{
+    background: rgb(153, 213, 228);
+    border-radius: 50px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK9lkE3cKzRrvj3Z391PcGWE0xiDm8EhoGQg&usqp=CAU);
+    background-size: cover;
+    background-position: center;
+    top: 6px;
+    left: 10px;
+}
+ul li.checked{
+    color: #da2323;
+    text-decoration: line-through;
+  
+}
+ul li.checked::before{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvhnYIVZd6rR9HAoQUomlRf4dIgp1vOdn9A&usqp=CAU);
+
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;  
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #d78787;   
+}
+
+@media screen and (max-width: 600px) {
+
+    .todo-app{
+        width: 100%;
+        min-height: 80px;
+        background: #fff;
+        margin: 10px auto 10px;
+        padding: 10px 10px 50px;
+        border-radius: 10px;
+    }
+    
+}
